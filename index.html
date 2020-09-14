@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+
+		<script src="https://unpkg.com/bootstrap-vue@2.17.0/dist/bootstrap-vue.js"></script>
+		<script src="https://unpkg.com/bootstrap-vue@2.17.0/dist/bootstrap-vue-icons.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="style.css">
+
+		<title>Incremental RPG</title>
+	</head>
+
+
+	<body>
+		<div id="game">
+			<b-navbar type="dark" variant="dark">
+				<b-navbar-brand>TEST</b-navbar-brand>
+				<b-nav-item href="#" active></b-nav-item>
+			</b-navbar>
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<p class="mt-4 mb-0">Level: {{ player.level }}</p>
+						<b-progress id="xp_bar_container" class="mb-1">
+							<b-progress-bar id="xp_bar" variant="warning" :value="player.xp" :max="player.xp_needed"></b-progress-bar>
+							<span class="progress-value">xp: {{ player.xp }} / {{ player.xp_needed }}</span>
+						</progress>
+					</div>
+					<b-tabs class="col-10" active>
+						<b-tab title="Feats">
+							<div id="upgrade_holder" class="row">
+								<b-card id="upgrade_ref"
+									sub-title="Test Upgrade"
+									class = "m-1"
+									style="width:20%"
+								>
+									<b-card-text id="update_ref_text">Wow wat a upgerd</b-card-text>
+									<b-progress id="update_ref_level" class="mb-1">
+										
+										<b-progress-bar id="update_ref_level_bar"></b-progress-bar>
+										<span class="progress-value"></span>
+									</b-progress>
+								</b-card>
+							</div>
+						</b-tab>
+					</b-tabs>
+				</div>
+			</div>
+		</div>
+
+		<script src="game.js"></script>
+	</body>
+</html>

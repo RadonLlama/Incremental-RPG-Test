@@ -1,0 +1,14 @@
+.progress {
+    text-align:center;
+}
+.progress-value {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	/*
+    position:absolute;
+    right:0;
+	left:0;*/
+}
